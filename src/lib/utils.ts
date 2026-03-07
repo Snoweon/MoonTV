@@ -36,8 +36,10 @@ export function processImageUrl(originalUrl: string): string {
 
   const proxyUrl = getImageProxyUrl();
   if (!proxyUrl) return originalUrl;
-
-  return `${proxyUrl}${encodeURIComponent(originalUrl)}`;
+  
+  originalUrl=originalUrl.replace(/img\d+\.doubanio\.com/, 'img.doubanio.cmliussss.net');
+  return originalUrl;
+  /*return `${proxyUrl}${encodeURIComponent(originalUrl)}`;*/
 }
 
 /**
