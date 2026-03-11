@@ -76,8 +76,8 @@ export function processDoubanUrl(originalUrl: string): string {
 
   const proxyUrl = getDoubanProxyUrl();
   if (!proxyUrl) return originalUrl;
-  if (proxyUrl === 'ali') return originalUrl.replace('m.douban.com', 'm.douban.cmliussss.com');
-  originalUrl=originalUrl.replace('m.douban.com', 'm.douban.cmliussss.net');
+  if (proxyUrl === 'ali') return originalUrl.replace(/m\.douban\.com/, 'm.douban.cmliussss.com');
+  originalUrl=originalUrl.replace(/m\.douban\.com/, 'm.douban.cmliussss.net');
   return originalUrl;
   
   /*return `${proxyUrl}${encodeURIComponent(originalUrl)}`;*/
