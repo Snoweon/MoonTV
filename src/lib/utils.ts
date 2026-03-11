@@ -36,7 +36,7 @@ export function processImageUrl(originalUrl: string): string {
 
   const proxyUrl = getImageProxyUrl();
   if (!proxyUrl) return originalUrl;
-  if (proxyUrl == 'ali') return originalUrl.replace(/img\d+\.doubanio\.com/, 'img.doubanio.cmliussss.com');
+  if (proxyUrl === 'ali') return originalUrl.replace(/img\d+\.doubanio\.com/, 'img.doubanio.cmliussss.com');
   originalUrl=originalUrl.replace(/img\d+\.doubanio\.com/, 'img.doubanio.cmliussss.net');
   return originalUrl;
   /*return `${proxyUrl}${encodeURIComponent(originalUrl)}`;*/
@@ -77,7 +77,7 @@ export function processDoubanUrl(originalUrl: string): string {
   const proxyUrl = getDoubanProxyUrl();
   if (!proxyUrl) return originalUrl;
 
-  if (proxyUrl == 'ali') return originalUrl.replace('m.doubanio.com', 'm.doubanio.cmliussss.com');
+  if (proxyUrl === 'ali') return originalUrl.replace('m.doubanio.com', 'm.doubanio.cmliussss.com');
   originalUrl=originalUrl.replace('m.doubanio.com', 'm.doubanio.cmliussss.net');
   return originalUrl
   //return `${proxyUrl}${encodeURIComponent(originalUrl)}`;
