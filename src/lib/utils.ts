@@ -76,11 +76,11 @@ export function processDoubanUrl(originalUrl: string): string {
 
   const proxyUrl = getDoubanProxyUrl();
   if (!proxyUrl) return originalUrl;
-
-  if (proxyUrl === 'ali') return originalUrl.replace('m.doubanio.com', 'm.doubanio.cmliussss.com');
-  originalUrl=originalUrl.replace('m.doubanio.com', 'm.doubanio.cmliussss.net');
-  return originalUrl
-  //return `${proxyUrl}${encodeURIComponent(originalUrl)}`;
+  if (proxyUrl === 'ali') return originalUrl.replace('m.douban.com', 'm.douban.cmliussss.com');
+  originalUrl=originalUrl.replace('m.douban.com', 'm.douban.cmliussss.net');
+  return originalUrl;
+  
+  /*return `${proxyUrl}${encodeURIComponent(originalUrl)}`;*/
 }
 
 export function cleanHtmlTags(text: string): string {
